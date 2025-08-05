@@ -1,10 +1,10 @@
 pipeline{
   agent any
   stages{
-    environment{
+    stage("build"){
+       environment{
       VERSION = '1'
     }
-    stage("build"){
       steps{
       echo "This is build step ${VERSION}"
       }
