@@ -20,6 +20,11 @@ pipeline{
       steps{
       echo "This is test stage"
         echo "this is username=${SECRET}"
+        withCredentials([
+          usernamePassword(credentials: 'dineshusername',usernameVariable: USER, passwordVariable: PASSWORD)
+        ]){
+            sh "some commandsd ${USER}"
+        }
         //withCredentials([
           //usernamePassword(credentials: 'server-credentials', usernameVariable: USER, passwordVariable: PASSWORD)
         //])
