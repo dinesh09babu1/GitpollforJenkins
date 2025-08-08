@@ -13,7 +13,7 @@ pipeline{
     stage("test"){
       when{
         expression{
-          env.BRANCH_NAME == null
+          env.BRANCH_NAME == null // BRANCH NAME is valid only for multi branch pipeline. NULL for normal pipeline job
         }
       }
       steps{
