@@ -23,7 +23,7 @@ pipeline{
         withCredentials([
           usernamePassword(credentials: 'dineshusername',usernameVariable: USER, passwordVariable: PASSWORD)
         ]){
-            sh "some commandsd ${USER}"
+          echo "some commandsd ${USER}"
         }
         //withCredentials([
           //usernamePassword(credentials: 'server-credentials', usernameVariable: USER, passwordVariable: PASSWORD)
