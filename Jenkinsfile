@@ -2,7 +2,7 @@ pipeline{
   agent any
   environment{
       VERSION = '1'
-    SERVER_CREDENTIALS = credentials('dineshusername')
+      SECRET = credentials('dineshusername')
     }
   stages{
     stage("build"){   
@@ -19,7 +19,7 @@ pipeline{
       }
       steps{
       echo "This is test stage"
-        echo "this is username=${SERVER_CREDENTIALS}"
+        echo "this is username=${SECRET}"
         //withCredentials([
           //usernamePassword(credentials: 'server-credentials', usernameVariable: USER, passwordVariable: PASSWORD)
         //])
