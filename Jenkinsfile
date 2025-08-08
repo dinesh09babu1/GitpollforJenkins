@@ -2,7 +2,7 @@ pipeline{
   agent any
   environment{
       VERSION = '1'
-    SERVE_CREDENTIALS = credentials('dineshusername')
+    SERVER_CREDENTIALS = credentials('dineshusername')
     }
   stages{
     stage("build"){   
